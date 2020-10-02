@@ -1,4 +1,3 @@
 dist
 .venv
 .gitignore
-**/__pycache__
