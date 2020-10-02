@@ -55,10 +55,11 @@ def bing_image_urls(  # pylint: disable=too-many-locals
     }
 
     url = "https://www.bing.com/images/async"
-    url1 = f"{url}?{urllib.parse.urlencode(data)}"
+    # url1 = f"{url}?{urllib.parse.urlencode(data)}"
 
     try:
-        resp = httpx.get(url1)
+        # resp = httpx.get(url1)
+        resp = httpx.get(url, params=data)
         resp.raise_for_status()
     except Exception as exc:
         logger.error(exc)
@@ -99,7 +100,7 @@ async def verify_status(links: List[str]) -> Union[Iterator[bool], List[bool]]:
 
 async def verify_links(links: List[str]) -> List[bool]:
     """ verify link hosts image content.
-    
+
     res = httpx.get(link)
     return
         True: if imghdr.what(None, res.content) return "jpeg|png|etc.
