@@ -2,12 +2,16 @@
 name = "bing-image-urls"
 version = "0.1.0"
 description = "fetch bing image urls based on keywords"
+readme ="README.md"
 authors = ["ffreemt"]
+repository = "https://github.com/ffreemt/light-aligner"
+include = [
+    "LICENSE",
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
 httpx = "^0.15.5"
-logzero = "^1.5.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
