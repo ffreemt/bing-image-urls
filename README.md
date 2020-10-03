@@ -34,4 +34,4 @@ print(get_image_size(io.BytesIO(resp.content)))
 # (1797, 2696)
 ```
 
-Most the code in `get_image_size` is from [imagesize_py](https://github.com/shibukawa/imagesize_py). As soon as the [PR](https://github.com/shibukawa/imagesize_py/pull/46) about filelike object is merged to the main, the `imagesize_py` package will be included as a depdendant package.
+Most of the code in `get_image_size` is from [imagesize_py](https://github.com/shibukawa/imagesize_py). As soon as the [PR](https://github.com/shibukawa/imagesize_py/pull/46) about filelike object is merged to the main branch, the `imagesize_py` package will be included as a depdendant package.
