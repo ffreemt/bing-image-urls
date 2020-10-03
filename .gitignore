@@ -2,3 +2,4 @@ dist
 .venv
 .gitignore
 **/__pycache__/
+debug.log

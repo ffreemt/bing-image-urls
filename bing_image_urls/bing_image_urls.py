@@ -10,10 +10,11 @@ from typing import Iterator, List, Union  # , Optional
 import asyncio
 import imghdr
 import re
-import urllib
+# import urllib
 import httpx
 
 from logzero import logger
+
 
 # fmt: off
 def bing_image_urls(  # pylint: disable=too-many-locals
