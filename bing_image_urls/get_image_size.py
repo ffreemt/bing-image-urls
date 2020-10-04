@@ -89,9 +89,11 @@ def _convertToPx(value):
             raise ValueError("unknown unit type: %s" % unit)
 
 
+# fmt: off
 def get_image_size(  # NOQA:  C901
-    filepath: Union[str, Path, io.BytesIO]
+        filepath: Union[str, Path, io.BytesIO]
 ) -> Tuple[int, int]:
+    # fmt: on
     """
     Return (width, height) for a given img file content
 
