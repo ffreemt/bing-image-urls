@@ -22,6 +22,7 @@ pre-commit = "^2.7.1"
 [tool.black]
 line-length = 88
 target-version = ["py37"]
+include = '\.pyi?$'
 exclude = '''  # must use single quotes
       \.eggs         # exclude a few common directories in the
     | \.git          # root of the project
