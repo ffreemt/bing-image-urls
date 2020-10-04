@@ -89,7 +89,9 @@ def _convertToPx(value):
             raise ValueError("unknown unit type: %s" % unit)
 
 
-def get_image_size(filepath: Union[str, Path, io.BytesIO]) -> Tuple[int, int]:
+def get_image_size(  # NOQA:  C901
+    filepath: Union[str, Path, io.BytesIO]
+) -> Tuple[int, int]:
     """
     Return (width, height) for a given img file content
 
@@ -117,7 +119,11 @@ def get_image_size(filepath: Union[str, Path, io.BytesIO]) -> Tuple[int, int]:
             except struct.error:
                 raise ValueError("Invalid GIF file")
         # see png edition spec bytes are below chunk length then and finally the
-        elif  size >= 24 and head.startswith(b"\211PNG\r\n\032\n") and head[12:16] == b"IHDR":
+        elif (
+            size >= 24
+            and head.startswith(b"\211PNG\r\n\032\n")
+            and head[12:16] == b"IHDR"
+        ):
             try:
                 width, height = struct.unpack(">LL", head[16:24])
             except struct.error:
