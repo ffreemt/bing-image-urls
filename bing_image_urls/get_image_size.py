@@ -2,6 +2,7 @@
 get image size.
 
 Based on image_size_py at github
+
 """
 from typing import Union, Tuple
 
