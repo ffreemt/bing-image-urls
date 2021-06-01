@@ -23,6 +23,7 @@ def bing_image_urls(  # pylint: disable=too-many-locals
         limit: int = 20,
         adult_filter_off: bool = False,
         verify_status_only: bool = None,
+        filters: str = "",
 ) -> List[str]:
     # fmt: on
     """ fetch bing image links.
@@ -46,7 +47,6 @@ def bing_image_urls(  # pylint: disable=too-many-locals
     if adult_filter_off:
         adult = "off"
 
-    filters = ""
     data = {
         "q": query,
         "first": page_counter,
