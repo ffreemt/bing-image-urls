@@ -16,11 +16,12 @@ print(bing_iamge_urls("bear", limit=2))
 # 'http://www.cariboutrailoutfitters.com/wp-content/uploads/2017/03/saskatchewan-black-bear-hunting.jpg']
 ```
 
-The helper function `get_image_size` may sometimes come handy if you need to know the size of the image. `get_image_size` takes a filename or a filelike object as input and outputs the widht and height of the image. Hence the raw bytes of an image from the net can be wrapped in io.BytesIO and fed to `get_image_size`.
+The helper function `get_image_size` may sometimes come handy if you need to know the size of the image. `get_image_size` takes a filename or a filelike object as input and outputs the width and height of the image. Hence the raw bytes of an image from the net can be wrapped in io.BytesIO and fed to `get_image_size`.
 
 ```python
 import io
 import httpx
+from logzero import logger
 from bing_image_urls import get_image_size
 
 url = "https://www.stgeorgeutah.com/wp-content/uploads/2017/01/blackbear.jpg"
