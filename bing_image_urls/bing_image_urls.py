@@ -10,6 +10,7 @@ from typing import Iterator, List, Union  # , Optional
 import asyncio
 import imghdr
 import re
+
 # import urllib
 import httpx
 
@@ -64,13 +65,13 @@ def bing_image_urls(  # pylint: disable=too-many-locals
         resp.raise_for_status()
     except Exception as exc:
         logger.error(exc)
-        raise exc
+        raise
 
     try:
         links = re.findall(r"murl&quot;:&quot;(.*?)&quot;", resp.text)
     except Exception as exc:
         logger.error(exc)
-        raise exc
+        raise
 
     if verify_status_only is None:  # do not check at all
         return links
@@ -96,6 +97,7 @@ async def verify_status(links: List[str]) -> Union[Iterator[bool], List[bool]]:
             if elm.status_code not in (200,):
                 return False
             return True
+
     return map(check_status_code, res)
 
 
@@ -107,8 +109,8 @@ async def verify_links(links: List[str]) -> List[bool]:
         True: if imghdr.what(None, res.content) return "jpeg|png|etc.
         False: if imghdr.what(None, res.content) return None or res == None
     """
-    async with httpx.AsyncClient() as sess:
 
+    async with httpx.AsyncClient() as sess:
         futs = (asyncio.ensure_future(sess.get(link)) for link in links)
 
         res = []

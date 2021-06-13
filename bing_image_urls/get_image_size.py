@@ -12,7 +12,6 @@ import re
 import struct
 from xml.etree import ElementTree
 
-
 _UNIT_KM = -3
 _UNIT_100M = -2
 _UNIT_10M = -1
