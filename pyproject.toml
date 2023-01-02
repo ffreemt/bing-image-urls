@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bing-image-urls"
-version = "0.1.4"
+version = "0.1.5"
 description = "fetch bing image urls based on keywords"
 readme ="README.md"
 authors = ["ffreemt"]
