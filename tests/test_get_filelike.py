@@ -4,7 +4,6 @@ test imagesize.get for filelike object io.BytesIO(raw bytes)
 to test:
 pytest -k test_get_filelike
 """
-
 from pathlib import Path
 from io import BytesIO
 
@@ -17,9 +16,9 @@ from bing_image_urls import get_image_size
 
 
 def test_get_filelike():
-    """ test_get_filelike. """
-
+    """Test get_filelike."""
     url = "https://www.tsln.com/wp-content/uploads/2018/10/bears-tsln-101318-3-1240x826.jpg"
+    url = "https://cdn.tsln.com/wp-content/uploads/sites/13/2018/10/bears-tsln-101318-3-1240x826.jpg"
     try:
         # response = requests.get(url)
         response = httpx.get(url)
@@ -34,9 +33,9 @@ def test_get_filelike():
 
 
 def test_get_filepath():
-    """ test_get_filelike. """
-
+    """Test get_filelike."""
     url = "https://www.tsln.com/wp-content/uploads/2018/10/bears-tsln-101318-3-1240x826.jpg"
+    url = "https://cdn.tsln.com/wp-content/uploads/sites/13/2018/10/bears-tsln-101318-3-1240x826.jpg"
     try:
         # response = requests.get(url)
         response = httpx.get(url)
