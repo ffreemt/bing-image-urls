@@ -14,7 +14,8 @@ jobs:
       max-parallel: 4
       matrix:
         # python-version: [3.6, 3.7, 3.8]  # checkout@v1 Error: Version 3.6 with arch x64 not found
-        python-version: [3.7, 3.8]
+        # python-version: [3.7, 3.8]
+        python-version: [3.8]
 
     steps:
     # - uses: actions/checkout@v1
