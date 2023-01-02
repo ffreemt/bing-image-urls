@@ -11,7 +11,7 @@ Fetch Bing image urls based on keywords
 
 from bing_image_urls import bing_image_urls
 
-print(bing_iamge_urls("bear", limit=2))
+print(bing_image_urls("bear", limit=2))
 # ['https://www.stgeorgeutah.com/wp-content/uploads/2017/01/blackbear.jpg',
 # 'http://www.cariboutrailoutfitters.com/wp-content/uploads/2017/03/saskatchewan-black-bear-hunting.jpg']
 ```
